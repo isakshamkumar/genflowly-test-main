@@ -6,8 +6,9 @@ module.exports = {
     mode: 'development',
     entry: './src/index.jsx',
     output: {
-        publicPath: 'http://127.0.0.1:8080/',
-       
+        publicPath: 'http://localhost:3000/',
+       //if doing via serve -g dist
+       //or if we do http-server dist---> then we have to change the public path
     },
     devServer: {
         port: 3006,
