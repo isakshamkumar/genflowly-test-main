@@ -4,13 +4,13 @@ const webpack = require('webpack');
 const deps = require("./package.json").dependencies;
 module.exports = {
     mode: 'development',
-    // entry: './src/index.jsx',
+    entry: './src/index.jsx',
     output: {
         publicPath: 'http://127.0.0.1:8080/',
        
     },
     devServer: {
-        // port: 3006,
+        port: 3006,
         historyApiFallback:{
             index:'index.html'
         },
