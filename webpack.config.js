@@ -7,7 +7,7 @@ module.exports = {
     mode: 'development',
     entry: './src/index.jsx',
     output: {
-        publicPath: 'http://localhost:3001/',
+        publicPath: 'https://master.d1okphxjsm9jw0.amplifyapp.com/',
         //if doing via serve -g dist
         //or if we do http-server dist---> then we have to change the public path
         //serve -s se horha h if we do in both
