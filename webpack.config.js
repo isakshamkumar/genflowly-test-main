@@ -7,12 +7,13 @@ module.exports = {
     mode: 'development',
     entry: './src/index.jsx',
     output: {
-        publicPath: 'https://master.dv99pvqx8qd1l.amplifyapp.com/',
+        publicPath: 'http://localhost:3001/',
         //if doing via serve -g dist
         //or if we do http-server dist---> then we have to change the public path
+        //serve -s se horha h if we do in both
     },
     devServer: {
-        port: 3006,
+        // port: 3006,
         historyApiFallback:{
             index:'index.html'
         },
@@ -31,11 +32,11 @@ module.exports = {
         new ModuleFederationPlugin({
             name: 'subAppTwo',
             filename: 'remoteEntry.js', // Specify the filename for remoteEntry.js
-            remotes: {
-                Host: 'Host@http://localhost:3000/remoteEntry.js',
-            },
+            // remotes: {
+            //     Host: 'Host@http://127.0.0.1:8081/remoteEntry.js',
+            // },
             // shared: { react: { singleton: true, eager: true }, "react-dom": { singleton: true, eager: true } },
-            // shared: {
+            // shared: {    
                 //     ...deps,
                 //     react: {
                     //         eager:true,
@@ -47,8 +48,8 @@ module.exports = {
                         //     //   singleton: true,
                         //     //   requiredVersion: deps["react-dom"],
                         //     // },
-                        exposes: {
-                            './Shell': './src/App.jsx',
+                        exposes: { 
+                           './Shell': './src/App.jsx',
                             // './Contact':'./src/Contact.jsx'
                         },
                         shared: {

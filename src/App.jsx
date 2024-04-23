@@ -7,7 +7,7 @@ function App() {
   // const location=useLocation()
   // console.log(location);
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/subapp-2">
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/cars/:id" element={<CarPage />} />
